@@ -1,20 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import App from './components/App';
 import reportWebVitals from './reportWebVitals';
 
 import { createStore } from "redux";
 import { Provider } from "react-redux";
 import rootReducers from "./store/reducer/index";
 
+import { MuiThemeProvider } from '@material-ui/core/styles';
+import theme from './theme/theme';
+
 const store = createStore(rootReducers);
 
 ReactDOM.render(
   <React.StrictMode>
+    <MuiThemeProvider theme={theme}>
     <Provider store={store}>
       <App />
     </Provider>
+    </MuiThemeProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
