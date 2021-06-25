@@ -22,11 +22,9 @@ function Homepage({ socket }) {
 
   const classes = useStyles();
 
-  //activates joinRoom function defined on the backend
   const sendData = () => {
     if (username !== "" && roomname !== "") {
       socket.emit("joinRoom", { username, roomname });
-      //if empty error message pops up and returns to the same page
     } else {
       alert("username and roomname are must !");
       location.reload();
