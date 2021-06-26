@@ -1,9 +1,10 @@
 import { Box, Grid } from "@material-ui/core";
 import React from "react";
-import Process from "../../process/Process";
+import Process from "../process/Process";
 import Chat from "../chat/Chat";
 
 const Login = (props) => {
+  console.log(props);
   return (
     <Grid container justify="center" direction="row" wrap="wrap" spacing={0}>
       <Grid item xs={12}>
